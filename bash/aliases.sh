@@ -18,10 +18,10 @@ alias rpry="pry -r./config/environment"
 alias tail-sidekiq="grc -c ~/.bash/grc/grc.sidekiq tail -f ./log/sidekiq.log"
 
 ######## ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la='ls -A'
+alias ls="ls -F --color=always"
+alias l="ls -lAh --color=always"
+alias ll="ls -l --color=always"
+alias la='ls -A --color=always'
 alias ld='ls -1d */' #Exibe somente diretorios
 
 ####### Safety net
@@ -74,3 +74,7 @@ movtogif(){
     ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
     convert -delay 5 -layers Optimize -loop 0 - "$2"
 }
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

@@ -2,9 +2,6 @@
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
-force_color_prompt=yes
-
-
 ####### Prompt ###############
 function prompt {
   local LIGHT_RED="\[\033[1;31m\]"
