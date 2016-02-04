@@ -5,3 +5,5 @@ source ~/.dotfiles/bash/prompt.sh
 source ~/.dotfiles/bash/aliases.sh
 
 source ~/.dotfiles/bash/rvm.sh
+
+complete -C ~/.dotfiles/bash/project_completion -o default proj
