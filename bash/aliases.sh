@@ -2,7 +2,6 @@
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd ..'
-function proj { cd ~/Dropbox/ruby/rails/$1; } # changing directory to code project
 alias mkdir='mkdir -p'
 alias tree='tree -C | less -R'
 

@@ -1,9 +1,14 @@
 export PATH=$PATH:$HOME/bin
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 
 source ~/.dotfiles/bash/prompt.sh
 source ~/.dotfiles/bash/aliases.sh
 
 source ~/.dotfiles/bash/rvm.sh
 
+
+function proj { cd ~/Dropbox/code/rails/$1; } # changing directory to code project
 complete -C ~/.dotfiles/bash/project_completion -o default proj

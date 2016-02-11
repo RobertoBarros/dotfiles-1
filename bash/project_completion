@@ -16,7 +16,7 @@ class ProjectCompletion
   end
 
   def projects
-    `ls ~/Dropbox/code/`.split
+    `ls ~/Dropbox/code/rails`.split
   end
 end
 
